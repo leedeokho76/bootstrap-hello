@@ -1,0 +1,7 @@
+/* 1. content-box는 콘텐츠 크기만 기준으로 계산되며, padding과 border는 크기 바깥에 추가
+   2. 박스 요소들의 일관된 크기계산을 위해 전체태그에 대해 box-sizing 속성을 border-box로 변경 사용
+   3. 이는 일부 서드파티 라이브러리(Google Maps, Google Custom Search Engin 등)에 영향
+   4. 이경우 필요한 클래스들에 대해 box-sizing 을 content-box 로 오버라이딩해서 사용 필요 */
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
