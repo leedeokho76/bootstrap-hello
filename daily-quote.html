@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!--1. 문서인코딩 안정성 확보-->
+    <meta charset="UTF-8" />
+
+    <!--2. 뷰포트 및 호환성 설정: 모바일 대응과 IE호환성-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!--3. SEO 및 문서정보; 구글에서 이제는 keywords 사용 안한다함.-->
+    <meta name="description" content="페이지설명" />
+    <meta name="keywords" content="HTML, CSS, javascript" />
+    <meta name="author" content="Lee Deokho" />
+
+    <!--4. 타이틀-->
+    <title>일일 명언</title>
+
+    <!--5. 외부 스타일시트 및 폰트
+        5.1. Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!--5.2. Private CSS-->
+    <link rel="stylesheet" href="./daily-quote.css" />
+
+    <!--6. 파바콘-->
+    <!--<link rel="icon" href="" />-->
+
+    <!--7. 외부 스크립트
+      7.1. defer 인자를 붙여야 dom생성후 Script 실행-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      defer
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!--7.2. Private JavaScript-->
+    <!--<script src="./hello.js" defer></script>-->
+  </head>
+  <body class="bg-danger bg-opacity-10">
+    <section class="container text-center">
+      <h1 class="mt-5 py-5 fw-bold">오늘의 명언</h1>
+      <figure
+        class="w-75 m-auto shadow-lg p-5 my-5 rounded-5 bg-danger bg-opacity-75 text-white"
+      >
+        <blockquote class="blockquote">
+          <p>You are the master of your fate, The captain of your soul.</p>
+          <p class="small">나는 내 운명의 주인이며, 나는 내 영혼의 선장이다.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer pt-5 text-white">
+          윌리엄 어니스트 헨리
+        </figcaption>
+      </figure>
+      <a href="#" class="btn btn-outline-dark">상세 보기</a>
+    </section>
+  </body>
+</html>

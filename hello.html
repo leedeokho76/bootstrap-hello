@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <!--1. 문서인코딩 안정성 확보-->
     <meta charset="UTF-8" />
@@ -8,56 +8,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!--3. SEO 및 문서정보-->
+    <!--3. SEO 및 문서정보; 구글에서 이제는 keywords 사용 안한다함.-->
     <meta name="description" content="페이지설명" />
     <meta name="keywords" content="HTML, CSS, javascript" />
     <meta name="author" content="Lee Deokho" />
 
     <!--4. 타이틀-->
-    <title>html, css, javascript 테스트</title>
+    <title>별자리 소개 예제 수행</title>
 
-    <!--5. 외부 스타일시트 및 폰트 Bootstrap CSS-->
+    <!--5. 외부 스타일시트 및 폰트
+        5.1. Bootstrap CSS-->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!--5.2. Private CSS-->
     <link rel="stylesheet" href="./hello.css" />
 
     <!--6. 파바콘-->
-    <link rel="icon" href="" />
+    <!--<link rel="icon" href="" />-->
 
     <!--7. 외부 스크립트
-      7.1. 스크립트 뒤에 defer를 붙여야 dom생성후 스크립트 실행
-      7.2. Bootstrap JavaScript 실행시 Popper 후 Bootstrap 순서 유지 필요-->
+      7.1. defer 인자를 붙여야 dom생성후 Script 실행-->
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       defer
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      defer
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
+    <!--7.2. Private JavaScript-->
+    <!--<script src="./hello.js" defer></script>-->
   </head>
-  <>
-    <h1><span class="badge bg-secondary">Hello, Bootstrap 5.0.2</span></h1><br/>
+  <body>
+    <!--클래스 입력순서 [레이아웃] → [정렬] → [색상] → [타이포그래피] → [기타]-->
+    <h1><span class="badge bg-secondary">Hello, Bootstrap 5.0.2</span></h1>
+    <hr />
     <button type="button" class="btn btn-primary">
       New Item <span class="badge bg-light">4</span>
-    </button><br/>
+    </button>
+    <hr />
+    <!--부트스트랩 색상적용 방법
+    btn btn-색상명
+    bg-색상명
+    border border-색상명
+    text-색상명
+    link-색상명-->
+    <button type="button">Basic</button>
     <button type="button" class="btn">Basic</button>
-    <button type="button" class="btn btn-primary">primary</button>
+    <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-warning">Warning</button>
     <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
     <button type="button" class="btn btn-link">Link</button>
+    <hr />
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-light">Light</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+    <hr />
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      style="
+        --bs-btn-padding-y: 0.25rem;
+        --bs-btn-padding-x: 0.5rem;
+        --bs-btn-font-size: 0.75rem;
+      "
+    >
+      Custom button
+    </button>
+    <hr />
+    <a class="btn btn-primary" href="#" role="button">Link</a>
+    <button class="btn btn-secondary" type="submit">Button</button>
+    <input class="btn btn-success" type="button" value="Input" />
+    <input class="btn btn-danger" type="submit" value="Submit" />
+    <input class="btn btn-warning" type="reset" value="Reset" />
   </body>
 </html>
