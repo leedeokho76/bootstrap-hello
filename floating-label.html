@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!--1. 문서인코딩 안정성 확보-->
+    <meta charset="UTF-8" />
+
+    <!--2. 뷰포트 및 호환성 설정: 모바일 대응과 IE호환성-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!--3. SEO 및 문서정보; 구글에서 이제는 keywords 사용 안한다함.-->
+    <meta name="description" content="페이지설명" />
+    <meta name="keywords" content="HTML, CSS, javascript" />
+    <meta name="author" content="Lee Deokho" />
+
+    <!--4. 타이틀-->
+    <title>별자리 소개 예제 수행</title>
+
+    <!--5. 외부 스타일시트 및 폰트
+        5.1. Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!--5.2. Private CSS-->
+    <link rel="stylesheet" href="./hello.css" />
+
+    <!--6. 파바콘-->
+    <!--<link rel="icon" href="" />-->
+
+    <!--7. 외부 스크립트
+      7.1. defer 인자를 붙여야 dom생성후 Script 실행-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      defer
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!--7.2. Private JavaScript-->
+    <!--<script src="./hello.js" defer></script>-->
+  </head>
+  <body class="bg-primary bg-opacity-25">
+    <!--클래스 입력순서 [레이아웃] → [정렬] → [색상] → [타이포그래피] → [기타]-->
+    <section class="container overflow-hidden text-center">
+      <div class="mt-5 py-5">
+        <h1 class="fw-bold">문의하기</h1>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <!--폼시작-->
+      <form action="" class="row g-4 w-75 m-auto justify-content-center">
+        <!--이름-->
+        <div class="col-md-6 col-lx-5">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control rounded-4"
+              id="nameInput"
+              placeholder="홍길동"
+            />
+            <label for="nameInput">성명</label>
+          </div>
+        </div>
+        <!--이메일-->
+        <div class="col-md-6 col-lx-5">
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control rounded-4"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">이메일</label>
+          </div>
+        </div>
+        <!--메시지-->
+        <div class="col-md-12 col-lx-10">
+          <div class="form-floating">
+            <textarea
+              class="form-control rounded-4"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style="height: 150px"
+            ></textarea>
+            <label for="floatingTextarea2">메시지</label>
+          </div>
+        </div>
+        <!--보내기 버튼-->
+        <div class="col-md-12 mt-5">
+          <div class="btn btn-danger rounded-4">보내기</div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
